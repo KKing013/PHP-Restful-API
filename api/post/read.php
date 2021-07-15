@@ -21,7 +21,9 @@ $post = new Post($db);
 // Blog post query
 
 $result = $post->read();
+
 // Get row count
+
 $num = $result->rowCount();
 
 if ($num > 0) {
@@ -33,6 +35,7 @@ if ($num > 0) {
         extract($row);
 
         $post_item = array(
+            
             'id' => $id,
             'title' => $title,
             'body' => html_entity_decode($body),
